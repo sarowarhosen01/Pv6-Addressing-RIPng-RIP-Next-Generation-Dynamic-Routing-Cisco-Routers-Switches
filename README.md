@@ -1,0 +1,2 @@
+# Pv6-Addressing-RIPng-RIP-Next-Generation-Dynamic-Routing-Cisco-Routers-Switches
+This project demonstrates the configuration and implementation of dynamic routing using RIPng (RIP for IPv6) in a multi-router IPv6 network using Cisco Packet Tracer. It showcases core networking skills including IPv6 address planning, interface configuration, routing protocol deployment, and end-to-end connectivity testing.
