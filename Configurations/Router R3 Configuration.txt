@@ -1,0 +1,56 @@
+! Enter 
+enable
+! Enter global configuration mode
+configure terminal
+
+! Set hostname
+hostname R3
+
+! Disable DNS lookup to avoid delays
+no ip domain-lookup
+
+! Enable IPv6 routing (MANDATORY for IPv6)
+ipv6 unicast-routing
+
+! Configure interfaces
+interface se0/0/0
+ ipv6 address  2001:34::2/64
+ ipv6 enable
+ no shutdown
+ description Link_to_R2
+
+interface se0/0/1
+ ipv6 address 2001:23::2/64
+ ipv6 enable
+ no shutdown
+ description Link_to_R5
+
+interface fa0/0
+ ipv6 address 2001:3::1/64
+ ipv6 enable
+ no shutdown
+ description Brance_Network
+
+
+
+! Configure RIPng (RIP for IPv6)
+ipv6 router rip RIPNG
+ !
+ ! No auto-summary needed in IPv6 (always classless)
+ ! Split horizon is enabled by default
+ !
+
+! Apply RIPng to interfaces
+interface se0/0/1
+ ipv6 rip RIPNG enable
+
+interface se0/0/0
+ ipv6 rip RIPNG enable
+
+interface fa0/0
+ ipv6 rip RIPNG enable
+
+! Save configuration
+end
+write memory
+copy running-config startup-config
