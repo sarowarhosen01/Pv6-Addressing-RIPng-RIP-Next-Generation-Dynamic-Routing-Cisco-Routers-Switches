@@ -2,8 +2,7 @@
 
 **A Cisco Packet Tracer Project**
 
-![Network Topology](topology.png)  
-*(Add a screenshot of your Packet Tracer topology here)*
+![Network Topology](https://raw.githubusercontent.com/sarowarhosen01/Pv6-Addressing-RIPng-RIP-Next-Generation-Dynamic-Routing-Cisco-Routers-Switches/refs/heads/main/Screenshots/Topology-overview.jpg)  
 
 ## Project Overview
 
@@ -29,7 +28,6 @@ This project implements IPv6 static routing across a multi-router topology. It d
 - **R3** connected to R2 and LAN2/LAN3
 - PCs connected via switches to respective routers
 
-*(Insert detailed topology diagram here - export from Packet Tracer)*
 
 ### Network Topology Table
 
@@ -58,7 +56,6 @@ This project implements IPv6 static routing across a multi-router topology. It d
 | PC1    | NIC                    | 2001:db8:1::10/64            | /64    | 2001:db8:1::1             |
 | PC2    | NIC                    | 2001:db8:3::10/64            | /64    | 2001:db8:3::1             |
 
-*(Update this table with your actual addresses from the .pkt file)*
 
 ## Configuration Highlights
 
